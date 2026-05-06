@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { Download } from "lucide-react";
 import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
 
 const roles = [
@@ -119,17 +118,14 @@ export default function Hero() {
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4">
-              <motion.a
-                href="/cv.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-dark font-semibold rounded hover:bg-accent/90 transition-all duration-200 text-sm"
-              >
-                <Download size={16} />
-                View CV
-              </motion.a>
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <Link
+                  href="/resume"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-dark font-semibold rounded hover:bg-accent/90 transition-all duration-200 text-sm"
+                >
+                  Resume
+                </Link>
+              </motion.div>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Link
                   href="/work"
@@ -188,8 +184,8 @@ export default function Hero() {
                 />
                 {/* Fallback gradient */}
                 <div className="flex items-center justify-center w-[300px] h-[300px] rounded-full overflow-hidden border border-green-500">
-                  <img 
-                    src="/images/profile.jpg" 
+                  <img
+                    src="/images/profile.jpg"
                     alt="profile"
                     className="w-full h-full object-cover"
                   />
