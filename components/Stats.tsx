@@ -11,7 +11,15 @@ const stats = [
   { value: 5, suffix: "+", label: "National/International Awards", prefix: "" },
 ];
 
-function CountUp({ target, suffix, prefix }) {
+function CountUp({
+  target,
+  suffix = "",
+  prefix = "",
+}: {
+  target: number;
+  suffix?: string;
+  prefix?: string;
+}) {
   const [count, setCount] = useState(0);
   const ref = useRef(null);
   const inView = useInView(ref, { once: true });
