@@ -28,21 +28,21 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #00ff99;
+  background: #8ed2fc;
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #00cc77;
+  background: #8ed2fc;
 }
 
 /* Accent glow effect */
 .accent-glow {
-  text-shadow: 0 0 20px rgba(0, 255, 153, 0.5);
+  text-shadow: 0 0 10px rgba(231, 255, 145, 0.683);
 }
 
 .border-accent-glow {
-  box-shadow: 0 0 20px rgba(0, 255, 153, 0.3);
+  box-shadow: 0 0 12px rgba(251, 255, 125, 0.3);
 }
 
 /* Blob animation */
@@ -87,8 +87,8 @@ body {
 
 .card-hover:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 40px rgba(0, 255, 153, 0.2);
-  border-color: #00ff99;
+  box-shadow: 0 10px 40px rgba(251, 255, 125, 0.3);
+  border-color: #deff7d;
 }
 
 /* Profile ring animation */
@@ -117,5 +117,5 @@ body {
   left: 0;
   right: 0;
   height: 2px;
-  background-color: #02f795;
+  background-color: #deff7d;
 }

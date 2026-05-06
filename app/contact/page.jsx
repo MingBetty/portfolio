@@ -15,20 +15,20 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "hello@example.com",
-    href: "mailto:hello@example.com",
+    value: "chala.tw2023@gmail.com",
+    href: "mailto:chala.tw2023@gmail.com",
   },
   {
     icon: Phone,
     label: "Phone",
-    value: "+1 (555) 123-4567",
-    href: "tel:+15551234567",
+    value: "(+886) 905631092",
+    href: "tel:+886905631092",
   },
   {
     icon: MapPin,
     label: "Location",
-    value: "San Francisco, CA",
-    href: "https://maps.google.com",
+    value: "Hsinchu, TW",
+    href: "https://maps.app.goo.gl/sLHrb4gVgyGa7q699",
   },
 ];
 
@@ -199,7 +199,7 @@ export default function ContactPage() {
                   onChange={handleChange}
                   required
                   className="w-full bg-dark border border-border rounded-lg px-4 py-3 text-sm text-white outline-none focus:border-accent transition-colors duration-200"
-                  placeholder="Project inquiry"
+                  placeholder="Collaboration / Opportunity / Other..."
                 />
               </div>
 
@@ -215,7 +215,7 @@ export default function ContactPage() {
                   onChange={handleChange}
                   required
                   className="w-full bg-dark border border-border rounded-lg px-4 py-3 text-sm text-white outline-none focus:border-accent transition-colors duration-200 resize-none"
-                  placeholder="Tell me about your idea..."
+                  placeholder="Tell me about your project, role, or collaboration opportunity..."
                 />
               </div>
 

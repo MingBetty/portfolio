@@ -49,7 +49,7 @@ function ProjectCard({ project, index }) {
           className="absolute inset-0 opacity-10"
           style={{
             backgroundImage:
-              "linear-gradient(#00ff99 1px, transparent 1px), linear-gradient(90deg, #00ff99 1px, transparent 1px)",
+              "linear-gradient(#ddff6d 1px, transparent 1px), linear-gradient(90deg, #ddff6d 1px, transparent 1px)",
             backgroundSize: "28px 28px",
           }}
         />

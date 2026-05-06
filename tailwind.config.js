@@ -8,10 +8,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        accent: "#00ff99",
-        dark: "#0d0d0d",
-        card: "#1a1a1a",
-        border: "#2a2a2a",
+        accent: "#ddfd9e",
+        dark: "#10141e",
+        card: "#181B22",
+        border: "#2A3140",
       },
       fontFamily: {
         mono: ["var(--font-mono)", "monospace"],

@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import PageTransition from "../../components/PageTransition";
 import { services } from "../../data/services";
@@ -40,6 +41,8 @@ const cardVariants = {
 };
 
 export default function ServicesPage() {
+  const [openId, setOpenId] = useState(null);
+
   return (
     <PageTransition>
       <div className="min-h-screen py-16 relative overflow-hidden">
@@ -110,33 +113,41 @@ export default function ServicesPage() {
 
                   {/* Content */}
                   <div className="relative z-10">
-                    <h3 className="text-white font-bold text-lg mb-3 group-hover:text-accent transition-colors duration-200">
+                    <h3 className="text-white font-bold text-lg mb-2 group-hover:text-accent transition-colors duration-200">
                       {service.title}
                     </h3>
-                    <p className="text-gray-400 text-sm leading-relaxed mb-5">
-                      {service.description}
-                    </p>
 
-                    {/* Tags */}
-                    <div className="flex flex-wrap gap-2 mb-5">
-                      {service.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="px-2 py-1 text-xs border border-accent/20 text-accent/70 rounded-md"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-
-                    {/* CTA */}
-                    <div className="flex items-center gap-1 text-xs text-gray-500 group-hover:text-accent transition-colors duration-200">
-                      <span>Learn more</span>
+                    <button
+                      type="button"
+                      onClick={() => setOpenId(openId === service.id ? null : service.id)}
+                      className="flex items-center gap-1 text-xs text-gray-500 hover:text-accent transition-colors duration-200 mb-4"
+                    >
+                      <span>{openId === service.id ? "Show less" : "Learn more"}</span>
                       <ArrowRight
                         size={12}
-                        className="group-hover:translate-x-1 transition-transform duration-200"
+                        className={`transition-transform duration-200 ${openId === service.id ? "rotate-90 text-accent" : ""
+                          }`}
                       />
-                    </div>
+                    </button>
+
+                    {openId === service.id && (
+                      <>
+                        <p className="text-white/80 text-sm leading-relaxed mb-5">
+                          {service.description}
+                        </p>
+
+                        <div className="flex flex-wrap gap-2 mb-5">
+                          {service.tags.map((tag) => (
+                            <span
+                              key={tag}
+                              className="px-2 py-1 text-xs border border-accent/20 text-accent/80 rounded-md"
+                            >
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+                      </>
+                    )}
                   </div>
 
                   {/* Bottom border accent */}
