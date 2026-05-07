@@ -14,7 +14,7 @@ module.exports = {
         border: "#2A3140",
       },
       fontFamily: {
-        mono: ["var(--font-mono)", "monospace"],
+        mono: ["var(--font-sans)", "system-ui"],
       },
     },
   },

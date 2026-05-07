@@ -50,7 +50,7 @@ export const experience = [
     period: "July 2023 — Aug 2023",
     location: "Taipei, Taiwan",
     description:
-      "Contributed to XR and platform game development through rigorous usability testing and UI/UX optimization [1]. Leveraged Unity for environment fine-tuning and Excel for systematic project tracking, providing critical feedback to developers to refine gameplay mechanics and immersive interaction flows.",
+      "Contributed to XR and platform game development through rigorous usability testing and UI/UX optimization. Leveraged Unity for environment fine-tuning and Excel for systematic project tracking, providing critical feedback to developers to refine gameplay mechanics and immersive interaction flows.",
     tech: ["Unity", "Excel", "Project Management", "XR Interaction", "UI/UX Testing"],
     current: false,
   },

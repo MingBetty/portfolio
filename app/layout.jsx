@@ -1,6 +1,11 @@
-import { JetBrains_Mono } from "next/font/google";
+import { Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
 import "../app/globals.css";
 import Navbar from "../components/Navbar";
+
+const jakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -17,7 +22,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${jetbrainsMono.variable} font-mono bg-dark text-white min-h-screen`}
+        className={`${jakarta.variable} bg-dark text-white min-h-screen font-sans`}
       >
         <Navbar />
         <main className="pt-16">{children}</main>

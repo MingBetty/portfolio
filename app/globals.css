@@ -15,7 +15,7 @@ html {
 body {
   background-color: #0d0d0d;
   color: #ffffff;
-  font-family: var(--font-mono), monospace;
+  font-family: var(--font-sans), system-ui;
 }
 
 /* Custom scrollbar */
